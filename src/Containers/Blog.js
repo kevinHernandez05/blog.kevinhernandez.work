@@ -49,6 +49,7 @@ const Blog = () => {
       }
 
       if (data) {
+        console.log(data?.repository?.issues?.nodes);
         setPosts(data?.repository?.issues?.nodes)
       }
     }
