@@ -1,6 +1,6 @@
-<h1 align="center">
-  React Blog 
-</h1>
+<!-- <h1 align="center">
+  Kevin Hernandez Blog 
+</h1> -->
 <!-- 
 <h2 align="center">
   React + Github Issues 👉 Your Personal Blog 🔥 
