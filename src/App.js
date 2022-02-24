@@ -4,6 +4,9 @@ import React, { Suspense, useState } from 'react';
 //Components
 import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
+
+//mockups
+import Card from './components/card/card'
 // import Post from './components/post/post';
 
 //konami code
@@ -18,9 +21,10 @@ function App() {
        
         <Navbar name="Kevin Hernandez - Blog" />
         <KonamiCode courseKey={'null'}/>
+        <Card />
         
 
-        
+      
         <Footer />
       </main>
     </div>
