@@ -10,27 +10,31 @@ import Card from "./components/card/card";
 
 //utils
 import Helmet from "react-helmet";
+import { ApolloProvider } from '@apollo/react-hooks';
 import KonamiCode from "./components/konamicode/konamiCode";
+import { client } from "./Utils/apollo";
 
-//configs
-import { Config } from "./config";
+//config
+import { config } from "./config";
+
 
 function App() {
   return (
     <>
       <Helmet>
-        <title>{ Config.title }</title>
+        <title>{config.title}</title>
         <meta charSet="utf-8" />
       </Helmet>
-      <div className="App">
-        <main className="App-header">
-          <Navbar name="Kevin Hernandez - Blog" />
-          <KonamiCode courseKey={"null"} />
-          <Card />
-
-          <Footer />
-        </main>
-      </div>
+      <ApolloProvider client={client}>
+        <div className="App">
+          <main className="App-header">
+            <Navbar name="Kevin Hernandez - Blog" />
+            <KonamiCode courseKey={"null"} />
+            <Card />
+            <Footer />
+          </main>
+        </div>
+      </ApolloProvider>
     </>
   );
 }

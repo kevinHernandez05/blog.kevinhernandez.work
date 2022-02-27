@@ -1,13 +1,13 @@
 import ApolloClient from "apollo-boost";
 
-import { Config } from '../Config'
+import { config } from '../config'
 
 export const client = new ApolloClient({
   uri: "https://api.github.com/graphql",
   request: operation => {
     operation.setContext({
       headers: {
-        authorization: `Bearer ${atob(Config.githubConvertedToken)}`
+        authorization: `Bearer ${atob(config.githubConvertedToken)}`
       }
     });
   }
