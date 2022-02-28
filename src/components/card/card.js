@@ -1,9 +1,9 @@
 import React from "react";
 
-const Card = (props) => {
+const Card = ({ post, index }) => {
   return (
     <div class="container sm:px-32 md:px-42 xl:px-64 py-24 mx-auto">
-      <div class="p-4" key={1}>
+      <div class="p-4" key={index}>
         <div class="h-full border-2 border-gray-200 rounded-lg overflow-hidden grid-cols-1 lg:grid-cols-2">
           {/* <img
             class="h-full w-full object-cover object-center"
@@ -11,7 +11,7 @@ const Card = (props) => {
             alt="Proyecto"
           ></img> */}
           <div class="p-6">
-            <p class="leading-relaxed mb-3">How to Dockerize a Deno app 👀 </p>
+            <p class="leading-relaxed mb-3">{post.title}</p>
             <h1 class="tracking-widest text-lg title-font font-medium text-gray-500 mb-1">
               #Yes #No
             </h1>
