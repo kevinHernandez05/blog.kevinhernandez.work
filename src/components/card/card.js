@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = ({ post, index }) => {
   return (
-    <div class="container sm:px-32 md:px-42 xl:px-64 py-24 mx-auto">
+    <div class="container sm:px-32 md:px-42 xl:px-64 mx-auto">
       <div class="p-4" key={index}>
         <div class="h-full border-2 border-gray-200 rounded-lg overflow-hidden grid-cols-1 lg:grid-cols-2">
           {/* <img
@@ -13,20 +13,19 @@ const Card = ({ post, index }) => {
           <div class="p-6">
             <p class="leading-relaxed mb-3">{post.title}</p>
             <h1 class="tracking-widest text-lg title-font font-medium text-gray-500 mb-1">
-              #Yes #No
+              {post.labels.map((label, index) => {
+                return <span>#{label.name} </span>;
+              })}
             </h1>
             <h1 class="tracking-widest text-lg title-font font-medium text-gray-500 mb-1">
-              Recently, I was in Developer Communities Whatsapp's groups talking
-              about new technologies, many of them were telling me about a new
-              one created by the creator of Node.js… Wait… what was its name
-              again? Deno? Wha...
+              {post.body.slice(0, 150)}...
             </h1>
             <div class="flex items-center flex-wrap ">
               <p class="text-gray-500 inline-flex items-center text-lg">
                 not url at the moment.
               </p>
               <span class="text-gray-600 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-300">
-                jun, 12t; 2021
+                {post.updated_at}
               </span>
             </div>
           </div>

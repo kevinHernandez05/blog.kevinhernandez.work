@@ -16,7 +16,6 @@ const Blog = () => {
         "https://api.github.com/repos/kevinHernandez05/kevin-blog/issues"
       );
       let json = await response.json();
-      console.log({ success: true, data: json });
       return { success: true, data: json };
     } catch (error) {
       console.log(error);
@@ -38,9 +37,11 @@ const Blog = () => {
   return !postLoaded ? (
     <LoadingCard />
   ) : (
-    posts.map((post, index) => {
-      return <Card post={post} key={index} />;
-    })
+    <div className="mt-24">
+      {posts.map((post, index) => {
+        return <Card post={post} key={index} />;
+      })}
+    </div>
   );
 };
 
