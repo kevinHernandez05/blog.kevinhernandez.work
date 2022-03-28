@@ -2,18 +2,13 @@ import React from "react";
 import Markdown from "markdown-to-jsx";
 import formatDate from "../../Utils/dateFormat";
 
-import './styles.css';
+import "./styles.css";
 
 const Card = ({ post }) => {
   return (
     <div className="container sm:px-32 md:px-42 xl:px-64 mx-auto">
       <div className="p-4">
         <div className="card h-full border-2 border-gray-200 rounded-lg overflow-hidden grid-cols-1 lg:grid-cols-2">
-          {/* <img
-            className="h-full w-full object-cover object-center"
-            src="https://camo.githubusercontent.com/cc42c1358f33e518bb1f3353bd1ce7984940b49635943a409cd45521c9c6ca8e/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f302a566661486b57627144757068725171582e6a7067"
-            alt="Proyecto"
-          ></img> */}
           <div className="p-6">
             {/* Post Title */}
             <p className="leading-relaxed mb-3">{post.title}</p>
@@ -23,9 +18,17 @@ const Card = ({ post }) => {
               <h1 className="tracking-widest text-lg title-font font-medium text-gray-500 mb-1">
                 {post.labels.map((label, index) => {
                   if (label.name !== "blog") {
-                    return <span key={index}>#{label.name} </span>;
+
+                    let color = label.color;
+                    return <span 
+                    className={"text-black p-2 bg-white"}
+                    key={index}>
+                      #{label.name}
+                      </span>;
                   }
                 })}
+
+                {console.log(post.labels)}
               </h1>
             </div>
 
