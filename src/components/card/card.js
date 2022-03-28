@@ -20,9 +20,11 @@ const Card = ({ post }) => {
             <div className="mb-9">
               <h1 className="tracking-widest text-lg title-font font-medium text-gray-500 mb-1">
                 {post.labels.map((label, index) => {
-                  return <span key={index}>#{label.name} </span>;
+                  if (label.name !== "blog") {
+                    return <span key={index}>#{label.name} </span>;
+                  }
                 })}
-              </h1> 
+              </h1>
             </div>
 
             {/* Information */}
