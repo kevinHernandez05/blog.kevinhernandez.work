@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useQuery } from "@apollo/react-hooks";
 
 import LoadingCard from "../components/card/loadingCard";
 import Card from "../components/card/card";
@@ -26,7 +25,9 @@ const Blog = () => {
   useEffect(() => {
     (async () => {
       setPostLoaded(false);
+
       let res = await fetchPost();
+      
       if (res.success) {
         setPost(res.data);
         setPostLoaded(true);
@@ -38,9 +39,11 @@ const Blog = () => {
     <LoadingCard />
   ) : (
     <div className="mt-24">
-      {posts.map((post, index) => {
-        return <Card post={post} key={index} />;
-      })}
+      {
+        posts.map((post, key) => { 
+          return <Card post={post} key={key} />; 
+        })
+      }
     </div>
   );
 };
