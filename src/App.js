@@ -1,10 +1,13 @@
 import "./App.css";
-import React, { Suspense, useState } from "react";
+import React from "react";
+
+import { Route, Routes } from "react-router";
 
 //Components
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import Blog from "./Containers/Blog";
+import BlogPost from './Containers/BlogPost';
 
 //utils
 import Helmet from "react-helmet";
@@ -26,8 +29,12 @@ function App() {
           <Navbar name="Kevin Hernandez - Blog" />
           <KonamiCode courseKey={""} />
 
-          {/* blog posts */}
-          <Blog />
+          <Routes>
+            {/* blog posts */}
+            <Route exact path="/" element={<Blog />} />
+            <Route exact path="/post/:id" element={<BlogPost />} />
+            <Route path="*" element={<Blog />} />
+          </Routes>
 
           <Footer />
         </main>

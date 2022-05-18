@@ -3,10 +3,15 @@ import Markdown from "markdown-to-jsx";
 import formatDate from "../../Utils/dateFormat";
 
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 const Card = ({ post }) => {
   return (
-    <div className="container sm:px-32 md:px-42 xl:px-64 mx-auto">
+    <div key={post.id} className="container sm:px-32 md:px-42 xl:px-64 mx-auto">
+      <Link to={{
+        pathname: `/post/${post.number}`,
+        state: post.id
+      }} >
       <div className="p-4">
         <div className="card h-full border-2 border-gray-200 rounded-lg overflow-hidden grid-cols-1 lg:grid-cols-2">
           <div className="p-6">
@@ -49,6 +54,9 @@ const Card = ({ post }) => {
           </div>
         </div>
       </div>
+      
+      </Link>
+      
     </div>
   );
 };

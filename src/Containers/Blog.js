@@ -41,7 +41,8 @@ const Blog = () => {
     <div className="mt-24">
       {
         posts.map((post, key) => { 
-          return <Card post={post} key={key} />; 
+          
+          return <Card post={post} key={post.id} />; 
         })
       }
     </div>
