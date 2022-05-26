@@ -1,4 +1,7 @@
 import "./style.css";
+import Markdown from "markdown-to-jsx";
+import formatDate from "../../Utils/dateFormat";
+
 
 const Post = ({ post, content }) => {
   return (
@@ -22,12 +25,17 @@ const Post = ({ post, content }) => {
         </div>
 
         <article class="max-w-prose mx-auto py-8">
-          <h1 class="text-4xl font-bold">{post.title}</h1>
+          <h1 class="text-4xl font-bold text-justify">{post.title}</h1>
           <h2 class="mt-2 text-sm text-gray-500">
-            Kevin Hernández, 28 November, 2021
+            {post.user.login} ; {formatDate(
+                  new Date(post.updated_at),
+                  "EEEE, MMMM d, yyyy HH:mm:ss aaa"
+                )} 
           </h2>
 
-          <div class="mt-6">{content}</div>
+          <div class="mt-6 text-justify">
+            <Markdown>{content}</Markdown>
+          </div>
         </article>
       </main>
     </>

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Markdown from "markdown-to-jsx";
 import Post from "../components/post/post";
 
 const BlogPost = ({ po }) => {
@@ -31,13 +30,15 @@ const BlogPost = ({ po }) => {
       if (res.success) {
         setPost(res.data);
         setPostLoaded(true);
-
-        post.body = <Markdown>{post.body}</Markdown>;
       }
     })();
   }, []);
 
-  return <Post post={post} />;
+  return postLoaded ? (
+    <Post post={post} content={post.body} />
+  ) : (
+    <div>Loading</div>
+  );
 };
 
 export default BlogPost;
