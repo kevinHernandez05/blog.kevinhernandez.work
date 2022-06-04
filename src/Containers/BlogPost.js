@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Post from "../components/post/post";
 
-const BlogPost = ({ po }) => {
+const BlogPost = () => {
   const { id } = useParams();
 
   const [post, setPost] = useState([]);

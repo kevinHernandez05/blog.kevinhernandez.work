@@ -6,16 +6,6 @@
 
 /*Fonts import*/
 
-@import url('./fonts/SFMono.css');
-h1 {
-    font-family: SF Mono Regular;
-    color: #5ae7c8;
-}
-
-p{
-    font-family: SF Mono Regular;
-}
-
 .App-header {
     background-color: #0a192f;
     min-height: 100vh;
@@ -23,12 +13,3 @@ p{
     color: white;
 }
 
-.section {
-    width: 100%;
-    height: 100vh;
-}
-
-.job-section {
-    width: 100%;
-   
-}
