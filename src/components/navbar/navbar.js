@@ -2,17 +2,17 @@ import "./style.css";
 
 export default function Navbar(props) {
   return (
-    <header class="bg-white shadow border-t-4 border-indigo-600 sticky top-0 z-50">
-      <div class="container mx-auto px-6 py-4">
-        <div class="flex items-center justify-between">
+    <header className="bg-white shadow border-t-4 border-indigo-600 sticky top-0 z-50">
+      <div className="container mx-auto px-6 py-4">
+        <div className="flex items-center justify-between">
           <div>
             <a
-              class="flex items-center text-gray-800 hover:text-indigo-600"
+              className="flex items-center text-gray-800 hover:text-indigo-600"
               rel="noreferrer"
               href="#"
             >
               <svg
-                class="h-6 w-6 sm:h-6 sm:w-6"
+                className="h-6 w-6 sm:h-6 sm:w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -25,17 +25,17 @@ export default function Navbar(props) {
                 />
               </svg>
 
-              <span class="mx-3 font-medium text-sm md:text-base">
+              <span className="mx-3 font-medium text-sm md:text-base">
                 {props.name}
               </span>
             </a>
           </div>
-          <div class="flex items-center -mx-2">
+          <div className="flex items-center -mx-2">
             {/** Section dropdowns */}
 
             {/** LinkedIn */}
             <a
-              class="flex items-center mx-2 text-gray-800 hover:text-indigo-600"
+              className="flex items-center mx-2 text-gray-800 hover:text-indigo-600"
               href="https://www.linkedin.com/in/kevinhernandez05/"
               rel="noreferrer"
               target="_blank"
@@ -52,13 +52,13 @@ export default function Navbar(props) {
 
             {/** Github */}
             <a
-              class="flex items-center mx-2 text-gray-800 hover:text-indigo-600"
+              className="flex items-center mx-2 text-gray-800 hover:text-indigo-600"
               href="https://github.com/kevinHernandez05"
               rel="noreferrer"
               target="_blank"
             >
               <svg
-                class="h-5 w-5 sm:h-6 sm:w-6 fill-current"
+                className="h-5 w-5 sm:h-6 sm:w-6 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
               >
