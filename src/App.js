@@ -26,13 +26,13 @@ function App() {
 
       <div className="App">
         <main className="App-header">
-          <Navbar name="Kevin Hernandez - Blog" />
+          <Navbar name="Kevin Hernández - Blog" />
           <KonamiCode courseKey={""} />
 
           <Routes>
             {/* blog posts */}
             <Route exact path="/" element={<Blog />} />
-            <Route exact path="/post/:id" element={<BlogPost />} />
+            <Route exact path="/post/:title/:id" element={<BlogPost />} />
             <Route path="*" element={<Blog />} />
           </Routes>
 
