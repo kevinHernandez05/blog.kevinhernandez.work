@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light|Quicksand|Playfair+Display:700i,900");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Roboto&display=swap');
 
 article {
   margin: 2rem auto 0;
@@ -8,14 +9,14 @@ article {
 }
 
 h1 {
-  font-family: "Shadows Into Light", serif;
+  font-family: "roboto", serif; 
   font-size: 48px;
   text-align: left;
   margin-bottom: 8px;
 }
 
 h2 {
-  font-family: "Shadows Into Light", sans-serif;
+  /* font-family: "Shadows Into Light", sans-serif; */
   font-size: 40px;
   font-weight: 700;
   padding: 0;
@@ -38,6 +39,11 @@ li {
   font-size: 21px;
   letter-spacing: -0.03px;
   line-height: 1.58;
+}
+
+li {
+  list-style-type: square;
+  margin-left: 40px;
 }
 
 blockquote {
@@ -111,9 +117,6 @@ img {
     margin-right: auto;
 }
 
-li {
-    display: list-item;
-}
 
 
 

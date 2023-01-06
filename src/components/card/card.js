@@ -6,7 +6,12 @@ import urlSlugFormatter from "../../Utils/urlSlugFormatter";
 import "./styles.css";
 import { Link } from "react-router-dom";
 
+
+
+
+
 const Card = ({ post }) => {
+
   let title = urlSlugFormatter(post.title);
 
   return (
